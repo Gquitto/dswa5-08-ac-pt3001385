@@ -12,10 +12,10 @@
     <div class="collapse navbar-collapse" id="navbarsExample02">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#/contatos">Contatos <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/contatos">Contatos <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#/cursos">Cursos</a>
+                <a class="nav-link" href="/cursos">Cursos</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-md-0">
@@ -26,7 +26,7 @@
 
 <br>
 
-<a ng-href='#/contato' class='btn btn-primary'>Novo Contato</a>
+<a ng-href='/contato' class='btn btn-primary'>Novo Contato</a>
 
 <p ng-show="contatos.length">Contatos cadastrados: {{contatos.length}}</p>
 <p class="text-info" ng-hide="contatos.length">Não há contatos cadastrados</p>
@@ -39,7 +39,7 @@
             <th class="text-center">Ação</th>
         </tr>
         <tr ng-repeat="contato in contatos | filter: filtro">
-            <td><a ng-href='#/contato/{{contato._id}}'>{{contato.nome}}</a></td>
+            <td><a ng-href='/contato/{{contato._id}}'>{{contato.nome}}</a></td>
             <td>{{contato.email}}</td>
             <td class="text-center"><button ng-click='remove(contato)' class="btn btn-warning">Remover</button></td>
         </tr>
